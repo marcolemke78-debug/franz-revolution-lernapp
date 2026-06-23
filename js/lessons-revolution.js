@@ -816,7 +816,7 @@ window.LESSON_DATA = (window.LESSON_DATA || []).concat([
           <strong>Deine Spickzettel-Übersicht (das Wichtigste auf einen Blick):</strong>
           <ul>
             <li><strong>Absolutismus</strong> = König hat alle Macht ("Der Staat bin ich"), begründet mit dem <strong>Gottesgnadentum</strong>.</li>
-            <li><strong>4 Säulen</strong>: Heer, Beamte, Wirtschaft, Kirche. Ludwig XIV. = Sonnenkönig, Versailles + Etikette = Adel entmachtet.</li>
+            <li><strong>4 Säulen</strong>: Beamte, Heer, Richter, Kirche. Ludwig XIV. = Sonnenkönig, Versailles + Etikette = Adel entmachtet.</li>
             <li><strong>Aufklärung</strong>: Vernunft, Gleichheit, Menschenrechte. Montesquieu = Gewaltenteilung, Rousseau = Volkssouveränität, Voltaire = Meinungsfreiheit.</li>
             <li><strong>Ständegesellschaft</strong>: 1. Kirche, 2. Adel, 3. alle anderen (98 %, zahlen Steuern). Sonderrechte = Privilegien.</li>
             <li><strong>Ursachen</strong>: Hunger (Missernten, Brotpreise), Staat pleite, Ideen der Aufklärung.</li>

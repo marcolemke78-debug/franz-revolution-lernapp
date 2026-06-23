@@ -2,7 +2,7 @@
  * Modul 1 - Absolutismus (Geschichts-Klassenarbeit, Klasse 8).
  *   L1 Überblick & Zeitstrahl 1661-1799 - Buch S. 84/85
  *   L2 Absolutismus & Gottesgnadentum (Ludwig XIV.) - Buch S. 88/89
- *   L3 Die 4 Säulen der Macht (Heer, Beamte, Wirtschaft, Kirche) + Versailles/Etikette - Buch S. 88-91
+ *   L3 Die 4 Säulen der Macht (Beamte, Heer, Richter, Kirche) + Versailles/Etikette - Buch S. 88-91
  *
  * Jede Lektion: Erklärung (mit Analogie/Tipp/Warnung) -> Beispiel -> Übungen.
  * Zielgruppe: Leonie, Klasse 8, Realschule BW, M-Niveau. Einfache Sprache, Alltagsanalogien.
@@ -319,19 +319,18 @@ window.LESSON_DATA = (window.LESSON_DATA || []).concat([
         <div class="analogy-box">
           <strong>Wie ein Tisch mit vier Beinen:</strong> Eine Tischplatte (die Macht des Königs) braucht
           vier stabile Beine, sonst kippt sie um. Beim absoluten König sind diese vier "Beine":
-          das <strong>Heer</strong>, die <strong>Beamten</strong>, die <strong>Wirtschaft</strong> und die <strong>Kirche</strong>.
+          die <strong>Beamten</strong>, das <strong>Heer</strong>, die <strong>Richter</strong> und die <strong>Kirche</strong>.
         </div>
 
-        <svg viewBox="0 0 440 150" role="img" aria-label="Vier Säulen tragen die absolute Macht des Königs: Heer, Beamte, Wirtschaft, Kirche" style="max-width:430px;width:100%;height:auto;display:block;margin:1rem auto;font-family:sans-serif;">
+        <svg viewBox="0 0 440 150" role="img" aria-label="Vier Säulen tragen die absolute Macht des Königs: Beamte, Heer, Richter, Kirche" style="max-width:430px;width:100%;height:auto;display:block;margin:1rem auto;font-family:sans-serif;">
           <rect x="40" y="14" width="360" height="26" rx="5" fill="#2563EB"/>
           <text x="220" y="32" text-anchor="middle" font-size="13" fill="#ffffff" font-weight="bold">Absolute Macht des Königs</text>
           <rect x="55" y="50" width="70" height="80" rx="4" fill="#dbeafe" stroke="#2563EB" stroke-width="2"/>
-          <text x="90" y="95" text-anchor="middle" font-size="12" fill="#1e3a8a" font-weight="bold">Heer</text>
+          <text x="90" y="95" text-anchor="middle" font-size="11" fill="#1e3a8a" font-weight="bold">Beamte</text>
           <rect x="148" y="50" width="70" height="80" rx="4" fill="#dbeafe" stroke="#2563EB" stroke-width="2"/>
-          <text x="183" y="90" text-anchor="middle" font-size="11" fill="#1e3a8a" font-weight="bold">Beamte</text>
+          <text x="183" y="95" text-anchor="middle" font-size="12" fill="#1e3a8a" font-weight="bold">Heer</text>
           <rect x="241" y="50" width="70" height="80" rx="4" fill="#dbeafe" stroke="#2563EB" stroke-width="2"/>
-          <text x="276" y="86" text-anchor="middle" font-size="10.5" fill="#1e3a8a" font-weight="bold">Wirt-</text>
-          <text x="276" y="99" text-anchor="middle" font-size="10.5" fill="#1e3a8a" font-weight="bold">schaft</text>
+          <text x="276" y="95" text-anchor="middle" font-size="11" fill="#1e3a8a" font-weight="bold">Richter</text>
           <rect x="334" y="50" width="70" height="80" rx="4" fill="#dbeafe" stroke="#2563EB" stroke-width="2"/>
           <text x="369" y="95" text-anchor="middle" font-size="12" fill="#1e3a8a" font-weight="bold">Kirche</text>
           <rect x="40" y="134" width="360" height="10" rx="3" fill="#9ca3af"/>
@@ -342,7 +341,7 @@ window.LESSON_DATA = (window.LESSON_DATA || []).concat([
           <tr><th>Säule</th><th>Wozu der König sie braucht</th></tr>
           <tr><td><strong>Heer</strong><br>(stehendes Heer)</td><td>Ein großes Berufs-Heer, das immer bereit ist. Damit führt der König Kriege und hält im Inneren <strong>Aufstände</strong> nieder. Macht durch Soldaten.</td></tr>
           <tr><td><strong>Beamte</strong><br>(Verwaltung)</td><td>Bezahlte Beamte führen im ganzen Land die Befehle des Königs aus, treiben Steuern ein und kontrollieren alles. So reicht die Macht des Königs bis in den letzten Winkel.</td></tr>
-          <tr><td><strong>Wirtschaft</strong><br>(Merkantilismus)</td><td>Der Staat fördert die Wirtschaft, baut Manufakturen (frühe Fabriken) und steuert den Handel - damit viel Geld in die Staatskasse fließt. Geld = Macht.</td></tr>
+          <tr><td><strong>Richter</strong><br>(Recht &amp; Gesetz)</td><td>Der König ist der <strong>oberste Richter</strong>. Er macht die Gesetze und steht selbst <strong>über dem Gesetz</strong> - niemand kann ihn vor Gericht stellen (keine Gewaltenteilung).</td></tr>
           <tr><td><strong>Kirche</strong><br>(eine Religion)</td><td>Die Kirche predigt den Gehorsam gegenüber dem König (Gottesgnadentum). Eine einheitliche Religion sorgt dafür, dass alle "an einem Strang ziehen".</td></tr>
         </table>
 
@@ -360,14 +359,14 @@ window.LESSON_DATA = (window.LESSON_DATA || []).concat([
 
         <div class="why-context">
           <strong>Warum lernen wir das?</strong> Auf deinem Lernzettel stehen genau diese "4 Säulen
-          (Beamte, Heer, Wirtschaft, Kirche)" und "Der König als absoluter Herrscher". Du sollst die vier
+          (Beamte, Heer, Richter, Kirche)" und "Der König als absoluter Herrscher". Du sollst die vier
           Säulen aufzählen und erklären können, wozu der König jede einzelne brauchte.
         </div>
 
         <div class="tip-box">
-          <strong>Eselsbrücke für die 4 Säulen:</strong> Denk an <strong>"H-B-W-K"</strong> -
-          <strong>H</strong>eer, <strong>B</strong>eamte, <strong>W</strong>irtschaft, <strong>K</strong>irche.
-          Merksatz: "<strong>H</strong>at <strong>B</strong>ald <strong>W</strong>ieder <strong>K</strong>ontrolle."
+          <strong>Eselsbrücke für die 4 Säulen:</strong> <strong>B</strong>eamte, <strong>H</strong>eer,
+          <strong>R</strong>ichter, <strong>K</strong>irche. Merksatz:
+          "<strong>B</strong>ei <strong>H</strong>ofe <strong>R</strong>egiert der <strong>K</strong>önig."
         </div>
 
         <div class="warning-box">
@@ -397,18 +396,18 @@ window.LESSON_DATA = (window.LESSON_DATA || []).concat([
         }
       ]
     },
-    exercisesIntro: "Frag dich bei jedem Beispiel: Welche der vier Säulen (Heer, Beamte, Wirtschaft, Kirche) ist gemeint?",
+    exercisesIntro: "Frag dich bei jedem Beispiel: Welche der vier Säulen (Beamte, Heer, Richter, Kirche) ist gemeint?",
     exercises: [
       {
         type: "matching",
         question: "Ordne jeder Säule des Absolutismus ihre Aufgabe zu:",
         pairs: [
-          { left: "Heer", right: "Kriege führen und Aufstände im Inneren niederschlagen" },
           { left: "Beamte", right: "Befehle ausführen, Steuern eintreiben, das Land verwalten" },
-          { left: "Wirtschaft", right: "Geld in die Staatskasse bringen (Handel, Manufakturen)" },
+          { left: "Heer", right: "Kriege führen und Aufstände im Inneren niederschlagen" },
+          { left: "Richter", right: "Recht sprechen; der König ist oberster Richter über dem Gesetz" },
           { left: "Kirche", right: "Gehorsam predigen und das Gottesgnadentum stützen" }
         ],
-        explanation: "Heer = Soldaten/Macht, Beamte = Verwaltung, Wirtschaft = Geld, Kirche = Gehorsam. Das sind die vier Stützen."
+        explanation: "Beamte = Verwaltung, Heer = Soldaten/Macht, Richter = Recht/Gesetz, Kirche = Gehorsam. Das sind die vier Stützen."
       },
       {
         type: "multiple-choice",
@@ -430,13 +429,13 @@ window.LESSON_DATA = (window.LESSON_DATA || []).concat([
       {
         type: "fill-in-blank",
         question: "Fülle die Lücken zu den Stützen der Macht:",
-        text: "Die vier Säulen des Absolutismus sind das {{blank}} (Soldaten), die Beamten (Verwaltung), die {{blank}} (Geld) und die Kirche. Die komplizierten Hofregeln in Versailles nannte man {{blank}}.",
+        text: "Die vier Säulen des Absolutismus sind die Beamten (Verwaltung), das {{blank}} (Soldaten), die {{blank}} (Recht) und die Kirche. Die komplizierten Hofregeln in Versailles nannte man {{blank}}.",
         blanks: [
           { correct: "Heer", alternatives: ["heer", "Militär", "stehende Heer"] },
-          { correct: "Wirtschaft", alternatives: ["wirtschaft", "Merkantilismus"] },
+          { correct: "Richter", alternatives: ["richter", "Gericht", "Justiz"] },
           { correct: "Etikette", alternatives: ["etikette"] }
         ],
-        explanation: "Heer, Beamte, Wirtschaft, Kirche - das sind die vier Säulen. Die Hofregeln hießen Etikette."
+        explanation: "Beamte, Heer, Richter, Kirche - das sind die vier Säulen. Die Hofregeln hießen Etikette."
       },
       {
         type: "multiple-choice",
