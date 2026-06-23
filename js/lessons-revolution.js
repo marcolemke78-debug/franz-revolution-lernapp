@@ -435,13 +435,11 @@ window.LESSON_DATA = (window.LESSON_DATA || []).concat([
           <tr><td><strong>Freiheit</strong></td><td>Jeder Mensch ist frei (z.B. Meinungsfreiheit, Religionsfreiheit).</td></tr>
           <tr><td><strong>Gleichheit</strong></td><td>Alle Menschen sind <strong>vor dem Gesetz gleich</strong> - keine Sonderrechte mehr.</td></tr>
           <tr><td><strong>Rechte von Geburt an</strong></td><td>Diese Rechte hat jeder Mensch von Geburt an. Niemand darf sie ihm nehmen.</td></tr>
-          <tr><td><strong>Volkssouveränität</strong></td><td>Die Macht im Staat geht vom Volk aus, nicht vom König.</td></tr>
         </table>
 
         <h3>"Weg mit den Privilegien!"</h3>
         <p>Mit der Gleichheit vor dem Gesetz waren die <strong>Privilegien</strong> von Adel und Kirche
-        <strong>abgeschafft</strong>. Schon in der "Nacht vom 4. August 1789" hatte die Nationalversammlung
-        die alten Feudalrechte aufgehoben. Jetzt galt: <strong>kein Sonderrecht mehr durch Geburt</strong>.
+        <strong>abgeschafft</strong>. Jetzt galt: <strong>kein Sonderrecht mehr durch Geburt</strong>.
         Das war das Ende der Ständegesellschaft.</p>
 
         <div class="info-card">
@@ -457,9 +455,9 @@ window.LESSON_DATA = (window.LESSON_DATA || []).concat([
         </div>
 
         <div class="tip-box">
-          <strong>Zwei Daten im August 1789 - so ordnest du sie:</strong> In der <strong>Nacht vom 4. August</strong>
-          werden die Privilegien/Feudalrechte abgeschafft. Am <strong>26. August</strong> kommt die Erklärung der
-          Menschenrechte. Beides August 1789 - das Wichtigste ist der 26. August (Menschenrechte).
+          <strong>Das Datum, das sitzen muss:</strong> <strong>26. August 1789</strong> = Erklärung der
+          Menschenrechte. Merk-Brücke: erst der Sturm auf die Bastille (14. Juli), wenige Wochen später die
+          Menschenrechte (26. August) - beide im Sommer 1789.
         </div>
 
         <div class="warning-box">
@@ -531,7 +529,7 @@ window.LESSON_DATA = (window.LESSON_DATA || []).concat([
         text: "Am 26. August {{blank}} beschloss die Nationalversammlung die Erklärung der Menschenrechte. Ihr Kern: Alle Menschen sind frei und vor dem Gesetz {{blank}}. Damit waren die {{blank}} von Adel und Kirche abgeschafft.",
         blanks: [
           { correct: "1789" },
-          { correct: "gleich", alternatives: ["gleich.", "gleichberechtigt"] },
+          { correct: "gleich", alternatives: ["gleichberechtigt"] },
           { correct: "Privilegien", alternatives: ["privilegien", "Sonderrechte"] }
         ],
         explanation: "26. August 1789: Freiheit und Gleichheit vor dem Gesetz - Ende der Privilegien."
@@ -597,7 +595,7 @@ window.LESSON_DATA = (window.LESSON_DATA || []).concat([
         {
           label: "1789-1791",
           html: `<p>Der König bleibt im Amt, aber eine Verfassung beschränkt seine Macht. Er ist jetzt eine
-            Art "König mit Regeln" (konstitutionelle Monarchie).</p>`
+            Art "König mit Regeln" - nicht mehr der alleinige Herrscher.</p>`
         },
         {
           label: "Der Vertrauensbruch",

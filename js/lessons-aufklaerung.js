@@ -37,6 +37,7 @@ window.LESSON_DATA = (window.LESSON_DATA || []).concat([
           <tr><td><strong>Gleichheit</strong></td><td>Alle Menschen sind gleich viel wert. Keiner ist von Geburt aus "besser" - auch nicht der Adel.</td></tr>
           <tr><td><strong>Freiheit / Toleranz</strong></td><td>Jeder darf seine Meinung sagen und an das glauben, was er möchte (Religionsfreiheit, Meinungsfreiheit).</td></tr>
           <tr><td><strong>Volkssouveränität</strong></td><td>Die Macht im Staat geht vom <strong>Volk</strong> aus - nicht von Gott und nicht vom König.</td></tr>
+          <tr><td><strong>Gesellschaftsvertrag</strong></td><td>Die Menschen vereinbaren gemeinsam, wie der Staat regiert wird. Die Herrschaft braucht die <strong>Zustimmung des Volkes</strong> (Idee von Rousseau).</td></tr>
         </table>
 
         <div class="info-card">
@@ -213,7 +214,7 @@ window.LESSON_DATA = (window.LESSON_DATA || []).concat([
         <table class="icon-table">
           <tr><th>Aufklärer</th><th>Seine Hauptidee</th></tr>
           <tr><td><strong>Montesquieu</strong></td><td>die <strong>Gewaltenteilung</strong> (Legislative, Exekutive, Judikative)</td></tr>
-          <tr><td><strong>Rousseau</strong></td><td>die <strong>Volkssouveränität</strong> - die Macht geht vom Volk aus</td></tr>
+          <tr><td><strong>Rousseau</strong></td><td>die <strong>Volkssouveränität</strong> - die Macht geht vom Volk aus (durch einen <strong>Gesellschaftsvertrag</strong>)</td></tr>
           <tr><td><strong>Voltaire</strong></td><td><strong>Meinungs- und Religionsfreiheit</strong>, Toleranz, Kampf gegen Vorurteile</td></tr>
         </table>
 

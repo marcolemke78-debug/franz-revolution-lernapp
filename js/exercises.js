@@ -1,15 +1,12 @@
 /**
- * Übungs-Engine für das Englisch-KA4-Lernprogramm.
+ * Übungs-Engine für das Geschichts-Lernprogramm
+ * (Absolutismus & Französische Revolution).
  *
- * Übernommene Typen (aus dem Arduino-Lernprogramm, bewährt):
+ * Genutzte Übungstypen:
  *   - multiple-choice  (mit elaboriertem Feedback je falscher Option)
- *   - matching         (Zuordnung links<->rechts, z.B. Englisch<->Deutsch)
- *   - ordering         (Reihenfolge per Pfeil-Buttons, z.B. Satzbau)
- *
- * Neue, englischspezifische Typen:
+ *   - matching         (Zuordnung links<->rechts, z.B. Begriff<->Erklärung)
+ *   - ordering         (Reihenfolge per Pfeil-Buttons, z.B. Zeitstrahl-Ereignisse)
  *   - fill-in-blank    (Lückentext, Text mit {{blank}}-Markern)
- *   - vocab-trainer    (Vokabel-Drill: deutsches Wort sehen, englisches tippen)
- *   - listening        (Browser liest englischen Text vor + Verständnisfrage)
  *   - free-text        (Schreibaufgabe + Musterlösung + Selbsteinschätzung)
  *
  * Render-Signatur überall: render(exercise, container, onComplete)
@@ -37,13 +34,6 @@ const Exercises = {
       .trim();
   },
 
-  /**
-   * Variante von _norm, die zusätzlich ein führendes "to " entfernt
-   * (für Vokabeln: "to surf" == "surf").
-   */
-  _normVocab(s) {
-    return Exercises._norm(s).replace(/^to\s+/, '');
-  },
 
   /**
    * Deterministischer Shuffle der options/correct/wrongExplanations für MC.
@@ -91,10 +81,6 @@ const Exercises = {
         return Exercises.renderOrdering(exercise, container, onComplete);
       case 'fill-in-blank':
         return Exercises.renderFillInBlank(exercise, container, onComplete);
-      case 'vocab-trainer':
-        return Exercises.renderVocabTrainer(exercise, container, onComplete);
-      case 'listening':
-        return Exercises.renderListening(exercise, container, onComplete);
       case 'free-text':
         return Exercises.renderFreeText(exercise, container, onComplete);
       default:
@@ -162,7 +148,7 @@ const Exercises = {
   },
 
   // ======================================================================
-  // Matching (Zuordnung) — z.B. Englisch <-> Deutsch
+  // Matching (Zuordnung) — z.B. Begriff <-> Erklärung
   // ======================================================================
   renderMatching(exercise, container, onComplete) {
     var pairColors = ['#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6', '#EC4899'];
@@ -318,7 +304,7 @@ const Exercises = {
   },
 
   // ======================================================================
-  // Ordering (Reihenfolge) — z.B. Satzbau / Wortstellung
+  // Ordering (Reihenfolge) — z.B. Ereignisse auf dem Zeitstrahl
   // ======================================================================
   renderOrdering(exercise, container, onComplete) {
     if (!Array.isArray(exercise.items) || !Array.isArray(exercise.correctOrder)
@@ -552,233 +538,8 @@ const Exercises = {
   },
 
   // ======================================================================
-  // Vocab-Trainer — deutsches Wort sehen, englisches tippen (Produktion!)
-  // exercise: { type, question?, words:[{de, en, alternatives?, hint?}] }
-  // Falsche Wörter wandern ans Ende und kommen nochmal dran.
-  // ======================================================================
-  renderVocabTrainer(exercise, container, onComplete) {
-    const wrapper = document.createElement('div');
-    wrapper.className = 'exercise-vocab';
-
-    if (exercise.question) {
-      const q = document.createElement('p');
-      q.className = 'exercise-question';
-      q.innerHTML = exercise.question;
-      wrapper.appendChild(q);
-    }
-
-    const total = exercise.words.length;
-    // Warteschlange: Indizes der Wörter; falsche werden hinten wieder eingereiht.
-    let queue = exercise.words.map(function(_, i) { return i; });
-    let firstTryCorrect = 0;
-    const triedWrong = {}; // markiert Wörter, die mind. einmal falsch waren
-
-    const progressEl = document.createElement('div');
-    progressEl.className = 'vocab-progress';
-    wrapper.appendChild(progressEl);
-
-    const card = document.createElement('div');
-    card.className = 'vocab-card';
-    wrapper.appendChild(card);
-
-    let solvedCount = 0;
-
-    function renderSummary() {
-      card.innerHTML = '<div class="vocab-done">✓ Geschafft! Du hattest <strong>'
-        + firstTryCorrect + ' von ' + total + '</strong> Wörter beim ersten Versuch richtig.'
-        + (firstTryCorrect === total
-            ? ' Perfekt — die sitzen!'
-            : ' Die schwierigen kommen über das Wiederholungsfach automatisch wieder.')
-        + '</div>';
-      progressEl.textContent = total + ' von ' + total + ' Wörtern geübt';
-      onComplete();
-    }
-
-    function showNext() {
-      if (queue.length === 0) { renderSummary(); return; }
-      const wordIdx = queue[0];
-      const word = exercise.words[wordIdx];
-      progressEl.textContent = 'Noch ' + queue.length + ' Wort' + (queue.length === 1 ? '' : 'er') + ' in dieser Runde · '
-        + solvedCount + ' von ' + total + ' gelöst';
-
-      card.innerHTML = '';
-      const promptEl = document.createElement('div');
-      promptEl.className = 'vocab-prompt';
-      promptEl.innerHTML = word.de;
-      card.appendChild(promptEl);
-
-      if (word.hint) {
-        const hintEl = document.createElement('div');
-        hintEl.className = 'vocab-hint';
-        hintEl.innerHTML = '💡 ' + word.hint;
-        card.appendChild(hintEl);
-      }
-
-      const input = document.createElement('input');
-      input.type = 'text';
-      input.className = 'vocab-input';
-      input.placeholder = 'englisches Wort …';
-      input.setAttribute('autocomplete', 'off');
-      input.setAttribute('autocapitalize', 'off');
-      input.setAttribute('autocorrect', 'off');
-      input.setAttribute('spellcheck', 'false');
-      card.appendChild(input);
-
-      const fb = document.createElement('div');
-      fb.className = 'exercise-feedback';
-      fb.style.display = 'none';
-      card.appendChild(fb);
-
-      const checkBtn = document.createElement('button');
-      checkBtn.className = 'exercise-check-btn';
-      checkBtn.textContent = 'Prüfen';
-      card.appendChild(checkBtn);
-
-      let answered = false;
-
-      function evaluate() {
-        if (answered) { return; }
-        const typed = Exercises._normVocab(input.value);
-        if (typed === '') { input.focus(); return; }
-        const candidates = [Exercises._normVocab(word.en)].concat(
-          (word.alternatives || []).map(Exercises._normVocab)
-        );
-        const ok = candidates.indexOf(typed) !== -1;
-        answered = true;
-        input.disabled = true;
-        checkBtn.style.display = 'none';
-
-        if (ok) {
-          input.classList.add('correct');
-          solvedCount++;
-          if (!triedWrong[wordIdx]) firstTryCorrect++;
-          fb.innerHTML = '✓ Richtig: <strong>' + word.en + '</strong>';
-          fb.className = 'exercise-feedback correct';
-          fb.style.display = 'block';
-          queue.shift();
-        } else {
-          input.classList.add('incorrect');
-          triedWrong[wordIdx] = true;
-          fb.innerHTML = 'Nicht ganz. Richtig ist: <strong>' + word.en + '</strong>'
-            + (word.alternatives && word.alternatives.length ? ' (auch: ' + word.alternatives.join(', ') + ')' : '')
-            + '<br>Dieses Wort kommt am Ende der Runde nochmal.';
-          fb.className = 'exercise-feedback incorrect';
-          fb.style.display = 'block';
-          // ans Ende der Warteschlange
-          queue.shift();
-          queue.push(wordIdx);
-        }
-
-        const nextBtn = document.createElement('button');
-        nextBtn.className = 'exercise-check-btn vocab-next';
-        nextBtn.textContent = queue.length === 0 ? 'Fertig' : 'Weiter →';
-        nextBtn.addEventListener('click', showNext);
-        card.appendChild(nextBtn);
-        nextBtn.focus();
-      }
-
-      checkBtn.addEventListener('click', evaluate);
-      input.addEventListener('keydown', function(e) {
-        if (e.key === 'Enter') {
-          e.preventDefault();
-          if (answered) {
-            const nb = card.querySelector('.vocab-next');
-            if (nb) nb.click();
-          } else {
-            evaluate();
-          }
-        }
-      });
-      input.focus();
-    }
-
-    showNext();
-    container.appendChild(wrapper);
-  },
-
-  // ======================================================================
-  // Listening — Browser liest englischen Text vor + Verständnisfrage (MC)
-  // exercise: { type, instruction?, audioText, lang?, rate?, question, options, correct, explanation, wrongExplanations? }
-  // ======================================================================
-  renderListening(exercise, container, onComplete) {
-    const wrapper = document.createElement('div');
-    wrapper.className = 'exercise-listening';
-
-    const instr = document.createElement('p');
-    instr.className = 'exercise-question';
-    instr.innerHTML = exercise.instruction
-      || 'Hör gut zu (du kannst mehrmals abspielen) und beantworte dann die Frage.';
-    wrapper.appendChild(instr);
-
-    const controls = document.createElement('div');
-    controls.className = 'listening-controls';
-
-    const playBtn = document.createElement('button');
-    playBtn.className = 'listening-play-btn';
-    playBtn.innerHTML = '▶ Abspielen';
-
-    const slowBtn = document.createElement('button');
-    slowBtn.className = 'listening-slow-btn';
-    slowBtn.innerHTML = '🐢 Langsam';
-
-    function speak(rate) {
-      if (!('speechSynthesis' in window)) {
-        warn.style.display = 'block';
-        return;
-      }
-      window.speechSynthesis.cancel();
-      const u = new SpeechSynthesisUtterance(exercise.audioText);
-      u.lang = exercise.lang || 'en-US';
-      u.rate = rate;
-      window.speechSynthesis.speak(u);
-    }
-
-    playBtn.addEventListener('click', function() { speak(exercise.rate || 0.9); });
-    slowBtn.addEventListener('click', function() { speak(0.6); });
-
-    controls.appendChild(playBtn);
-    controls.appendChild(slowBtn);
-    wrapper.appendChild(controls);
-
-    const warn = document.createElement('div');
-    warn.className = 'exercise-feedback incorrect';
-    warn.style.display = 'none';
-    warn.innerHTML = 'Dein Browser kann keine Sprache vorlesen. Tipp: Nutze Safari oder Chrome. '
-      + 'Du kannst den Text unten trotzdem aufdecken.';
-    wrapper.appendChild(warn);
-
-    container.appendChild(wrapper);
-
-    // Verständnisfrage als eingebettete Multiple-Choice
-    const questionWrap = document.createElement('div');
-    questionWrap.className = 'listening-question';
-    wrapper.appendChild(questionWrap);
-    Exercises.renderMultipleChoice({
-      type: 'multiple-choice',
-      question: exercise.question,
-      options: exercise.options,
-      correct: exercise.correct,
-      explanation: exercise.explanation,
-      wrongExplanations: exercise.wrongExplanations,
-      hint: exercise.hint
-    }, questionWrap, onComplete);
-
-    // Text zum Nachlesen (erst auf Klick) — als Lernhilfe
-    const reveal = document.createElement('details');
-    reveal.className = 'listening-transcript';
-    const sum = document.createElement('summary');
-    sum.textContent = 'Text anzeigen (zum Nachlesen)';
-    reveal.appendChild(sum);
-    const tx = document.createElement('p');
-    tx.className = 'listening-transcript-text';
-    tx.textContent = exercise.audioText;
-    reveal.appendChild(tx);
-    wrapper.appendChild(reveal);
-  },
-
-  // ======================================================================
   // Free-text — Schreibaufgabe mit Musterlösung + Selbsteinschätzung
-  // Freies Englisch lässt sich nicht zuverlässig automatisch bewerten;
+  // Freier Text lässt sich nicht zuverlässig automatisch bewerten;
   // darum: schreiben -> Musterlösung aufdecken -> selbst einschätzen.
   // exercise: { type, question, hint?, modelAnswer, minWords? }
   // ======================================================================
