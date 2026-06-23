@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Karteikarten - Absolutismus & Französische Revolution</title>
+<link rel="stylesheet" href="print.css">
+<style>
+  /* Mittelfalz-Karteikarten: einseitig drucken, ausschneiden, in der Mitte
+     nach HINTEN falten. Begriff unten (vorne), Antwort oben kopfüber -
+     nach dem Falten steht die Antwort hinten richtig herum. */
+  .anleitung {
+    background: #eff6ff; border: 1px dashed #1d4ed8; border-radius: 4px;
+    padding: 2.5mm 4mm; font-size: 9.5pt; color: #1d4ed8; margin-bottom: 4mm;
+  }
+  .gruppe-titel {
+    font-size: 10pt; color: #1d4ed8; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .5px; margin: 3mm 0 2mm; border-bottom: 1px solid #c3d3f7; padding-bottom: 1mm;
+    break-after: avoid; page-break-after: avoid;
+  }
+  .reihe {
+    display: flex; gap: 5mm; margin-bottom: 4mm;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  .karte { width: calc(50% - 2.5mm); border: 1.4px solid #333; }
+  .haelfte {
+    height: 30mm; box-sizing: border-box; padding: 2.5mm 4mm; overflow: hidden;
+    display: flex; flex-direction: column; justify-content: center;
+  }
+  /* Obere Hälfte = Antwort, kopfüber gedruckt */
+  .antwort { transform: rotate(180deg); font-size: 9pt; line-height: 1.3; }
+  /* Untere Hälfte = Begriff (Vorderseite), Faltlinie als obere Kante */
+  .begriff { border-top: 1.5px dashed #999; text-align: center; }
+  .begriff .kategorie {
+    font-size: 7.5pt; color: #888; text-transform: uppercase; letter-spacing: .6px; margin-bottom: 1.5mm;
+  }
+  .begriff .wort { font-weight: 700; font-size: 12.5pt; color: #1d4ed8; }
+</style>
+</head>
+<body>
+
+<div class="kopf">
+  <h1>Karteikarten</h1>
+  <div class="meta">Absolutismus &amp; Französische Revolution<br>Klasse 8 &middot; Mittelfalz zum Falten</div>
+</div>
+
+<div class="anleitung">
+  <strong>So geht's:</strong> Blatt einseitig ausdrucken. Eine Karte am durchgezogenen Rahmen ausschneiden
+  und an der gestrichelten Linie in der Mitte <strong>nach hinten falten</strong>. Dann steht vorne der
+  Begriff (Frage) und hinten - richtig herum - die Antwort. Vorne anschauen, Antwort selbst sagen, hinten
+  kontrollieren.
+</div>
+
+<div class="gruppe-titel">Grundbegriffe</div>
+<div class="reihe">
+  <div class="karte">
+    <div class="haelfte antwort"><div>Der König hat die <strong>uneingeschränkte (absolute) Macht</strong>
+      und regiert ganz allein - keine Gewaltenteilung. ("Der Staat bin ich.")</div></div>
+    <div class="haelfte begriff"><div class="kategorie">Begriff</div><div class="wort">Absolutismus</div></div>
+  </div>
+  <div class="karte">
+    <div class="haelfte antwort"><div>Der König glaubt, seine Macht <strong>direkt von Gott</strong>
+      erhalten zu haben, und ist nur Gott verantwortlich - kein Mensch darf ihn kontrollieren.</div></div>
+    <div class="haelfte begriff"><div class="kategorie">Begriff</div><div class="wort">Gottesgnadentum</div></div>
+  </div>
+</div>
+<div class="reihe">
+  <div class="karte">
+    <div class="haelfte antwort"><div><strong>Sonderrechte</strong> von Adel und Kirche, vor allem:
+      kaum oder keine Steuern zahlen müssen.</div></div>
+    <div class="haelfte begriff"><div class="kategorie">Begriff</div><div class="wort">Privilegien</div></div>
+  </div>
+  <div class="karte">
+    <div class="haelfte antwort"><div>Eine Staatsform <strong>ohne König</strong>. Das Staatsoberhaupt
+      wird nicht vererbt. (Gegenteil: Monarchie.)</div></div>
+    <div class="haelfte begriff"><div class="kategorie">Begriff</div><div class="wort">Republik</div></div>
+  </div>
+</div>
+
+<div class="gruppe-titel">Absolutismus &amp; Ludwig XIV.</div>
+<div class="reihe">
+  <div class="karte">
+    <div class="haelfte antwort"><div>Heer, Beamte, Wirtschaft, Kirche. (Eselsbrücke: H-B-W-K.)</div></div>
+    <div class="haelfte begriff"><div class="kategorie">Frage</div><div class="wort">Die 4 Säulen der Macht?</div></div>
+  </div>
+  <div class="karte">
+    <div class="haelfte antwort"><div>Ludwig XIV. machte die Sonne zu seinem Zeichen - Symbol seiner
+      alles überstrahlenden Macht.</div></div>
+    <div class="haelfte begriff"><div class="kategorie">Frage</div><div class="wort">Wer war der "Sonnenkönig"?</div></div>
+  </div>
+</div>
+<div class="reihe">
+  <div class="karte">
+    <div class="haelfte antwort"><div>Die strengen Hofregeln in Versailles. Damit hielt der König den
+      <strong>Adel</strong> beschäftigt und <strong>entmachtete</strong> ihn.</div></div>
+    <div class="haelfte begriff"><div class="kategorie">Begriff</div><div class="wort">Etikette</div></div>
+  </div>
+  <div class="karte">
+    <div class="haelfte antwort"><div>Ludwig <strong>XVI.</strong> (der 16.) - schwach, wurde 1793
+      hingerichtet. (Nicht verwechseln mit dem Sonnenkönig Ludwig XIV.!)</div></div>
+    <div class="haelfte begriff"><div class="kategorie">Frage</div><div class="wort">König der Revolution?</div></div>
+  </div>
+</div>
+
+<div class="gruppe-titel">Aufklärung</div>
+<div class="reihe">
+  <div class="karte">
+    <div class="haelfte antwort"><div>Die <strong>Gewaltenteilung</strong>: Macht aufteilen in
+      Legislative, Exekutive und Judikative.</div></div>
+    <div class="haelfte begriff"><div class="kategorie">Aufklärer</div><div class="wort">Montesquieu</div></div>
+  </div>
+  <div class="karte">
+    <div class="haelfte antwort"><div>Die <strong>Volkssouveränität</strong>: die Macht im Staat geht
+      vom Volk aus.</div></div>
+    <div class="haelfte begriff"><div class="kategorie">Aufklärer</div><div class="wort">Rousseau</div></div>
+  </div>
+</div>
+<div class="reihe">
+  <div class="karte">
+    <div class="haelfte antwort"><div><strong>Meinungs- und Religionsfreiheit</strong>, Toleranz,
+      Kampf gegen Vorurteile.</div></div>
+    <div class="haelfte begriff"><div class="kategorie">Aufklärer</div><div class="wort">Voltaire</div></div>
+  </div>
+  <div class="karte">
+    <div class="haelfte antwort"><div><strong>Legislative</strong> = macht Gesetze (Parlament).
+      <strong>Exekutive</strong> = regiert/führt aus (Regierung). <strong>Judikative</strong> = spricht
+      Recht (Gerichte).</div></div>
+    <div class="haelfte begriff"><div class="kategorie">Frage</div><div class="wort">Die 3 Gewalten?</div></div>
+  </div>
+</div>
+
+<div class="gruppe-titel">Ständegesellschaft</div>
+<div class="reihe">
+  <div class="karte">
+    <div class="haelfte antwort"><div>1. Stand = <strong>Geistlichkeit</strong> (Kirche),
+      2. Stand = <strong>Adel</strong>, 3. Stand = <strong>alle anderen</strong> (ca. 98 %).</div></div>
+    <div class="haelfte begriff"><div class="kategorie">Frage</div><div class="wort">Die 3 Stände?</div></div>
+  </div>
+  <div class="karte">
+    <div class="haelfte antwort"><div>Der 3. Stand (ca. 98 %) zahlte fast <strong>alle Steuern</strong>,
+      durfte aber <strong>nicht mitbestimmen</strong>. 1. und 2. Stand waren durch Privilegien befreit.</div></div>
+    <div class="haelfte begriff"><div class="kategorie">Frage</div><div class="wort">Was war ungerecht?</div></div>
+  </div>
+</div>
+
+<div class="gruppe-titel">Wichtige Daten</div>
+<div class="reihe">
+  <div class="karte">
+    <div class="haelfte antwort"><div><strong>Sturm auf die Bastille</strong> - der Beginn der Revolution.</div></div>
+    <div class="haelfte begriff"><div class="kategorie">Datum</div><div class="wort">14. Juli 1789</div></div>
+  </div>
+  <div class="karte">
+    <div class="haelfte antwort"><div>Die <strong>Erklärung der Menschen- und Bürgerrechte</strong>:
+      Freiheit und Gleichheit für alle, Ende der Privilegien.</div></div>
+    <div class="haelfte begriff"><div class="kategorie">Datum</div><div class="wort">26. August 1789</div></div>
+  </div>
+</div>
+<div class="reihe">
+  <div class="karte">
+    <div class="haelfte antwort"><div>Frankreich wird <strong>Republik</strong> - der König wird abgesetzt.</div></div>
+    <div class="haelfte begriff"><div class="kategorie">Datum</div><div class="wort">1792</div></div>
+  </div>
+  <div class="karte">
+    <div class="haelfte antwort"><div>Der <strong>König wird hingerichtet</strong> (mit der Guillotine).</div></div>
+    <div class="haelfte begriff"><div class="kategorie">Datum</div><div class="wort">1793</div></div>
+  </div>
+</div>
+<div class="reihe">
+  <div class="karte">
+    <div class="haelfte antwort"><div><strong>Napoleon</strong> übernimmt die Macht und beendet die Revolution.</div></div>
+    <div class="haelfte begriff"><div class="kategorie">Datum</div><div class="wort">1799</div></div>
+  </div>
+  <div class="karte">
+    <div class="haelfte antwort"><div>"Freiheit - Gleichheit - Brüderlichkeit"
+      (liberté, égalité, fraternité).</div></div>
+    <div class="haelfte begriff"><div class="kategorie">Frage</div><div class="wort">Der Leitspruch?</div></div>
+  </div>
+</div>
+
+<div class="gruppe-titel">Verstehen</div>
+<div class="reihe">
+  <div class="karte">
+    <div class="haelfte antwort"><div>Hunger (Missernten, teures Brot), leere Staatskasse (Staat pleite)
+      und die Ideen der Aufklärung. Merke: <strong>Hunger - Geld - Ideen</strong>.</div></div>
+    <div class="haelfte begriff"><div class="kategorie">Frage</div><div class="wort">Ursachen der Revolution?</div></div>
+  </div>
+  <div class="karte">
+    <div class="haelfte antwort"><div>Aus <strong>Hunger</strong>, Wut über die <strong>Ungerechtigkeit</strong>
+      und <strong>Angst</strong>, der König werde die Nationalversammlung mit Soldaten auflösen.</div></div>
+    <div class="haelfte begriff"><div class="kategorie">Frage</div><div class="wort">Warum greifen die Bürger zu den Waffen?</div></div>
+  </div>
+</div>
+
+<div class="fuss">Karteikarten zur App: Absolutismus &amp; Französische Revolution &middot; Klasse 8</div>
+
+</body>
+</html>
