@@ -3,135 +3,175 @@
 <head>
 <meta charset="UTF-8">
 <title>Lernzettel - Absolutismus & Französische Revolution</title>
-<link rel="stylesheet" href="print.css">
+<style>
+  /* Kompaktes Spickzettel-Druck-Layout: A4, zweispaltig, dichte Abstände.
+     Ziel: alles auf möglichst wenige Seiten, ohne zerrissene Tabellen/Kästen. */
+  @page { size: A4; margin: 8mm 9mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: #1a1a1a; font-size: 9pt; line-height: 1.32; margin: 0;
+  }
+
+  /* Kopf + Fuß über volle Breite */
+  .kopf {
+    display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 2.5px solid #1d4ed8; padding-bottom: 1.5mm; margin-bottom: 2mm;
+  }
+  .kopf h1 { font-size: 15pt; color: #1d4ed8; margin: 0; }
+  .kopf .meta { font-size: 8.5pt; color: #555; text-align: right; }
+  .intro { font-size: 8pt; color: #555; margin: 0 0 2.5mm; }
+  .fuss { margin-top: 3mm; font-size: 7.5pt; color: #999; text-align: center; }
+
+  /* Zweispaltiger Inhalt */
+  .cols { column-count: 2; column-gap: 6mm; }
+
+  h2 {
+    font-size: 10pt; color: #1d4ed8; margin: 0 0 1.5mm;
+    border-bottom: 1.2px solid #1d4ed8; padding-bottom: 0.6mm;
+    break-after: avoid; break-inside: avoid;
+  }
+  h2:not(:first-child) { margin-top: 3mm; }
+  h3 { font-size: 9pt; margin: 2mm 0 1mm; break-after: avoid; }
+
+  /* Tabellen + Kästen nie über Spalten/Seiten zerreißen */
+  table {
+    width: 100%; border-collapse: collapse; margin: 0 0 2mm; font-size: 8.3pt;
+    break-inside: avoid;
+  }
+  th, td { border: 0.5px solid #bbb; padding: 0.9mm 1.6mm; text-align: left; vertical-align: top; }
+  th { background: #e8eefc; font-size: 8pt; }
+  td.en { font-weight: 700; white-space: nowrap; }
+
+  .box {
+    border: 0.6px solid #ccc; border-radius: 3px; padding: 1.4mm 2mm;
+    margin: 0 0 2mm; font-size: 8.3pt; break-inside: avoid;
+  }
+  .box-rule { background: #f7f9ff; border-color: #c3d3f7; }
+  .box-tip  { background: #fffbeb; border-color: #f1d58a; }
+  .box-warn { background: #fef2f2; border-color: #f3b4b4; }
+  .box ul { margin: 0.8mm 0 0; padding-left: 4.5mm; }
+  .box li { margin-bottom: 0.4mm; }
+
+  .beispiel { font-style: italic; color: #1d4ed8; }
+  .hinweis { font-size: 7.8pt; color: #777; }
+</style>
 </head>
 <body>
 
 <div class="kopf">
   <h1>Lernzettel Geschichte</h1>
-  <div class="meta">Absolutismus &amp; Französische Revolution<br>Klasse 8</div>
+  <div class="meta">Absolutismus &amp; Französische Revolution &middot; Klasse 8</div>
 </div>
-<p class="intro">Alles für die Arbeit auf einen Blick. <strong>Tipp:</strong> einmal durchlesen, dann eine
-Spalte zudecken und versuchen, sie aus dem Kopf aufzusagen. Zum Drucken: im Browser auf "Drucken"
-(Strg/Cmd + P).</p>
+<p class="intro"><strong>Spickzettel zum Lernen:</strong> einmal durchlesen, dann eine Spalte zudecken und
+aus dem Kopf aufsagen. Drucken: im Browser Strg/Cmd + P.</p>
 
-<h2>1. Der Zeitstrahl - die wichtigsten Daten</h2>
-<table>
-  <tr><th>Wann</th><th>Was passiert?</th></tr>
-  <tr><td class="en">1661–1715</td><td>Ludwig XIV. ("Sonnenkönig") regiert als absoluter König.</td></tr>
-  <tr><td class="en">18. Jahrhundert</td><td>Die Aufklärung kritisiert die Macht des Königs.</td></tr>
-  <tr><td class="en">14. Juli 1789</td><td><strong>Sturm auf die Bastille</strong> - die Revolution beginnt.</td></tr>
-  <tr><td class="en">26. August 1789</td><td>Erklärung der <strong>Menschen- und Bürgerrechte</strong>.</td></tr>
-  <tr><td class="en">1792</td><td>Frankreich wird <strong>Republik</strong> (Staat ohne König).</td></tr>
-  <tr><td class="en">21. Januar 1793</td><td>Der <strong>König wird hingerichtet</strong> (Guillotine).</td></tr>
-  <tr><td class="en">1799</td><td><strong>Napoleon</strong> übernimmt die Macht, Revolution beendet.</td></tr>
-</table>
-<div class="box box-tip">
-  <strong>Die 3 Zahlen, die du blind können musst:</strong> <strong>1789</strong> Revolution beginnt
-  (Bastille) &middot; <strong>1792</strong> Republik &middot; <strong>1793</strong> König hingerichtet.
-  Merke die Reihenfolge: erst Revolution, dann Republik, dann Hinrichtung.
-</div>
+<div class="cols">
 
-<h2>2. Absolutismus</h2>
-<div class="box box-rule">
-  <strong>Absolutismus</strong> = der König hat die <strong>uneingeschränkte (absolute) Macht</strong> und
-  regiert ganz allein. Er macht die Gesetze, regiert und richtet - keine Gewaltenteilung, kein Parlament.
-  Leitsatz Ludwigs XIV.: <span class="beispiel">"Der Staat bin ich."</span>
-</div>
-<div class="box box-rule">
-  <strong>Gottesgnadentum</strong> = der König glaubt, seine Macht <strong>direkt von Gott</strong> erhalten
-  zu haben ("König von Gottes Gnaden"). Deshalb ist er <strong>nur Gott verantwortlich</strong>, kein Mensch
-  darf ihn kontrollieren.
-</div>
-<h3>Die 4 Säulen der Macht</h3>
-<table>
-  <tr><th>Säule</th><th>Wozu?</th></tr>
-  <tr><td class="en">Beamte</td><td>Befehle ausführen, Steuern eintreiben, das Land verwalten.</td></tr>
-  <tr><td class="en">Heer</td><td>Kriege führen und Aufstände niederschlagen (stehendes Heer).</td></tr>
-  <tr><td class="en">Richter</td><td>Der König ist oberster Richter, macht die Gesetze und steht über dem Gesetz.</td></tr>
-  <tr><td class="en">Kirche</td><td>Gehorsam predigen, das Gottesgnadentum stützen.</td></tr>
-</table>
-<div class="box box-tip">
-  <strong>Eselsbrücke 4 Säulen - "B-H-R-K":</strong> Beamte, Heer, Richter, Kirche
-  ("Bei Hofe Regiert der König").<br>
-  <strong>Versailles &amp; Etikette:</strong> Ludwig XIV. holte den <strong>Adel</strong> ins Schloss
-  Versailles und hielt ihn mit Festen und strengen Hofregeln (= <strong>Etikette</strong>) beschäftigt -
-  so <strong>entmachtete</strong> er ihn. Sein Sonnensymbol = der Name "Sonnenkönig".
-</div>
+  <h2>1. Zeitstrahl - die wichtigsten Daten</h2>
+  <table>
+    <tr><th>Wann</th><th>Was passiert?</th></tr>
+    <tr><td class="en">1661–1715</td><td>Ludwig XIV. ("Sonnenkönig") regiert als absoluter König.</td></tr>
+    <tr><td class="en">18. Jh.</td><td>Die Aufklärung kritisiert die Macht des Königs.</td></tr>
+    <tr><td class="en">14.7.1789</td><td><strong>Sturm auf die Bastille</strong> - die Revolution beginnt.</td></tr>
+    <tr><td class="en">26.8.1789</td><td>Erklärung der <strong>Menschen- und Bürgerrechte</strong>.</td></tr>
+    <tr><td class="en">1792</td><td>Frankreich wird <strong>Republik</strong> (Staat ohne König).</td></tr>
+    <tr><td class="en">21.1.1793</td><td>Der <strong>König wird hingerichtet</strong> (Guillotine).</td></tr>
+    <tr><td class="en">1799</td><td><strong>Napoleon</strong> übernimmt die Macht, Revolution beendet.</td></tr>
+  </table>
+  <div class="box box-tip">
+    <strong>Die 3 Zahlen, die blind sitzen müssen:</strong> <strong>1789</strong> Revolution (Bastille) &middot;
+    <strong>1792</strong> Republik &middot; <strong>1793</strong> König hingerichtet. Reihenfolge: erst
+    Revolution, dann Republik, dann Hinrichtung.
+  </div>
 
-<h2>3. Die Aufklärung</h2>
-<div class="box box-rule">
-  <strong>Aufklärung</strong> (18. Jh.) = die Menschen sollen ihren <strong>eigenen Verstand (Vernunft)</strong>
-  benutzen, statt blind zu gehorchen. Kernideen: <strong>Gleichheit</strong> aller Menschen,
-  <strong>Menschenrechte</strong> (von Geburt an), <strong>Volkssouveränität</strong> (Macht geht vom Volk aus).
-  &rarr; Das war die geistige Grundlage der Revolution.
-</div>
-<table>
-  <tr><th>Aufklärer</th><th>Seine Hauptidee</th></tr>
-  <tr><td class="en">Montesquieu</td><td><strong>Gewaltenteilung</strong> (Macht in drei Teile aufteilen)</td></tr>
-  <tr><td class="en">Rousseau</td><td><strong>Volkssouveränität</strong> - die Macht geht vom Volk aus</td></tr>
-  <tr><td class="en">Voltaire</td><td><strong>Meinungs- und Religionsfreiheit</strong>, Toleranz</td></tr>
-</table>
-<div class="box box-tip">
-  <strong>Gewaltenteilung (Montesquieu):</strong> <strong>Legislative</strong> = macht Gesetze (Parlament) &middot;
-  <strong>Exekutive</strong> = regiert / führt aus (Regierung) &middot; <strong>Judikative</strong> = spricht
-  Recht (Gerichte). So kann keiner Alleinherrscher werden - Grundlage jeder Demokratie bis heute.
-  Merke "M-R-V": Montesquieu-Macht teilen, Rousseau-Regierung durchs Volk, Voltaire-verschiedene Meinungen.
-</div>
+  <h2>2. Absolutismus</h2>
+  <div class="box box-rule">
+    <strong>Absolutismus</strong> = der König hat die <strong>uneingeschränkte Macht</strong> und regiert
+    allein. Er macht Gesetze, regiert und richtet - keine Gewaltenteilung.
+    Leitsatz Ludwigs XIV.: <span class="beispiel">"Der Staat bin ich."</span>
+  </div>
+  <div class="box box-rule">
+    <strong>Gottesgnadentum</strong> = der König glaubt, seine Macht <strong>direkt von Gott</strong> zu haben
+    ("von Gottes Gnaden"). Darum ist er <strong>nur Gott verantwortlich</strong>.
+  </div>
+  <h3>Die 4 Säulen der Macht</h3>
+  <table>
+    <tr><th>Säule</th><th>Wozu?</th></tr>
+    <tr><td class="en">Beamte</td><td>Befehle ausführen, Steuern eintreiben, verwalten.</td></tr>
+    <tr><td class="en">Heer</td><td>Kriege führen, Aufstände niederschlagen.</td></tr>
+    <tr><td class="en">Richter</td><td>König ist oberster Richter, steht über dem Gesetz.</td></tr>
+    <tr><td class="en">Kirche</td><td>Gehorsam predigen, Gottesgnadentum stützen.</td></tr>
+  </table>
+  <div class="box box-tip">
+    <strong>Eselsbrücke "B-H-R-K":</strong> Beamte, Heer, Richter, Kirche ("Bei Hofe Regiert der König").<br>
+    <strong>Versailles &amp; Etikette:</strong> Ludwig XIV. holte den <strong>Adel</strong> nach Versailles und
+    beschäftigte ihn mit Festen und Hofregeln (= <strong>Etikette</strong>) - so <strong>entmachtete</strong>
+    er ihn.
+  </div>
 
-<div class="seitenumbruch"></div>
-<div class="kopf">
-  <h1>Lernzettel Geschichte</h1>
-  <div class="meta">Seite 2 - Die Französische Revolution</div>
-</div>
+  <h2>3. Die Aufklärung</h2>
+  <div class="box box-rule">
+    <strong>Aufklärung</strong> (18. Jh.) = selbst denken mit dem <strong>Verstand (Vernunft)</strong> statt
+    blind gehorchen. Kernideen: <strong>Gleichheit</strong>, <strong>Menschenrechte</strong>,
+    <strong>Volkssouveränität</strong> (Macht vom Volk). &rarr; geistige Grundlage der Revolution.
+  </div>
+  <table>
+    <tr><th>Aufklärer</th><th>Hauptidee</th></tr>
+    <tr><td class="en">Montesquieu</td><td><strong>Gewaltenteilung</strong> (Macht aufteilen)</td></tr>
+    <tr><td class="en">Rousseau</td><td><strong>Volkssouveränität</strong> (Macht vom Volk)</td></tr>
+    <tr><td class="en">Voltaire</td><td><strong>Meinungs- &amp; Religionsfreiheit</strong>, Toleranz</td></tr>
+  </table>
+  <div class="box box-tip">
+    <strong>Gewaltenteilung:</strong> <strong>Legislative</strong> = Gesetze (Parlament) &middot;
+    <strong>Exekutive</strong> = regiert (Regierung) &middot; <strong>Judikative</strong> = Recht (Gerichte).
+    Merke "M-R-V": Montesquieu-Macht teilen, Rousseau-Volk, Voltaire-Meinung.
+  </div>
 
-<h2>4. Die Ständegesellschaft</h2>
-<table>
-  <tr><th>Stand</th><th>Wer?</th><th>Anteil</th></tr>
-  <tr><td class="en">1. Stand</td><td>Geistlichkeit (Kirche)</td><td>ca. 0,5 %</td></tr>
-  <tr><td class="en">2. Stand</td><td>Adel</td><td>ca. 1,5 %</td></tr>
-  <tr><td class="en">3. Stand</td><td>alle anderen: Bürger, Handwerker, Bauern</td><td>ca. 98 %</td></tr>
-</table>
-<div class="box box-warn">
-  <strong>Das Ungerechte:</strong> Der 1. und 2. Stand hatten <strong>Privilegien</strong> (Sonderrechte) -
-  vor allem: <strong>kaum Steuern</strong>. Der 3. Stand (ca. 98 % des Volkes) zahlte <strong>fast alle
-  Steuern</strong>, durfte aber <strong>nicht mitbestimmen</strong>. <em>Privileg = Sonderrecht durch Geburt.</em>
-</div>
+  <h2>4. Die Ständegesellschaft</h2>
+  <table>
+    <tr><th>Stand</th><th>Wer?</th><th>Anteil</th></tr>
+    <tr><td class="en">1. Stand</td><td>Geistlichkeit (Kirche)</td><td>~0,5 %</td></tr>
+    <tr><td class="en">2. Stand</td><td>Adel</td><td>~1,5 %</td></tr>
+    <tr><td class="en">3. Stand</td><td>alle anderen: Bürger, Bauern</td><td>~98 %</td></tr>
+  </table>
+  <div class="box box-warn">
+    <strong>Das Ungerechte:</strong> 1. + 2. Stand hatten <strong>Privilegien</strong> (kaum Steuern). Der
+    3. Stand (~98 %) zahlte <strong>fast alle Steuern</strong>, durfte aber <strong>nicht mitbestimmen</strong>.
+  </div>
 
-<h2>5. Ursachen der Revolution</h2>
-<div class="box box-rule">
-  Merke die drei Stichworte <strong>Hunger - Geld - Ideen</strong>:
-  <ul style="margin:1.5mm 0 0;">
-    <li><strong>Hunger:</strong> Missernten &rarr; Brot knapp und teuer &rarr; das Volk hungert.</li>
-    <li><strong>Geld:</strong> Der Staat ist durch Kriege und Hofluxus fast <strong>pleite</strong>;
-      die Steuern sind ungerecht verteilt.</li>
-    <li><strong>Ideen:</strong> Die Aufklärung lehrt: alle Menschen sind gleich.</li>
-  </ul>
-  Dazu: ein schwacher König (<strong>Ludwig XVI.</strong>).
-</div>
-<div class="box box-warn">
-  <strong>Zwei verschiedene Ludwigs!</strong> <strong>Ludwig XIV.</strong> (14.) = Sonnenkönig, Glanzzeit
-  des Absolutismus. <strong>Ludwig XVI.</strong> (16.) = König der Revolution, schwach, 1793 hingerichtet.
-</div>
+  <h2>5. Ursachen der Revolution</h2>
+  <div class="box box-rule">
+    Stichworte <strong>Hunger - Geld - Ideen</strong>:
+    <ul>
+      <li><strong>Hunger:</strong> Missernten &rarr; Brot teuer &rarr; das Volk hungert.</li>
+      <li><strong>Geld:</strong> Staat fast <strong>pleite</strong>; Steuern ungerecht.</li>
+      <li><strong>Ideen:</strong> Aufklärung - alle Menschen sind gleich.</li>
+    </ul>
+    Dazu: schwacher König (<strong>Ludwig XVI.</strong>).
+  </div>
+  <div class="box box-warn">
+    <strong>Zwei Ludwigs!</strong> <strong>XIV.</strong> (14.) = Sonnenkönig (Absolutismus).
+    <strong>XVI.</strong> (16.) = König der Revolution, 1793 hingerichtet.
+  </div>
 
-<h2>6. Verlauf 1789 – die Zwischenschritte</h2>
-<p style="font-size:10pt;color:#555;margin:0 0 2mm;">(Die Jahreszahlen stehen oben im Zeitstrahl – hier die Schritte, die dort fehlen.)</p>
-<table>
-  <tr><th>Ereignis</th><th>Das musst du wissen</th></tr>
-  <tr><td class="en">Generalstände (Mai 1789)</td><td>Versammlung aller Stände; Streit ums Abstimmen.</td></tr>
-  <tr><td class="en">Ballhausschwur (Juni 1789)</td><td>Der 3. Stand (= <strong>Nationalversammlung</strong>) schwört: keine Trennung ohne Verfassung.</td></tr>
-  <tr><td class="en">Schreckensherrschaft (1793/94)</td><td>"Großer Schrecken": Robespierre lässt Tausende mit der Guillotine hinrichten (Terror).</td></tr>
-</table>
-<div class="box box-tip">
-  <strong>Warum greifen die Bürger zu den Waffen?</strong> Aus <strong>Hunger</strong>, aus Wut über die
-  <strong>Ungerechtigkeit</strong> und aus <strong>Angst</strong>, der König werde die Nationalversammlung
-  mit Soldaten gewaltsam auflösen.
-</div>
+  <h2>6. Verlauf 1789 (Zwischenschritte)</h2>
+  <table>
+    <tr><th>Ereignis</th><th>Das musst du wissen</th></tr>
+    <tr><td class="en">Generalstände</td><td>Mai 1789: Versammlung aller Stände; Streit ums Abstimmen.</td></tr>
+    <tr><td class="en">Ballhausschwur</td><td>Juni 1789: 3. Stand (= <strong>Nationalversammlung</strong>) schwört: keine Trennung ohne Verfassung.</td></tr>
+    <tr><td class="en">Schreckens-<br>herrschaft</td><td>1793/94: Robespierre lässt Tausende mit der Guillotine hinrichten (Terror).</td></tr>
+  </table>
+  <div class="box box-tip">
+    <strong>Warum greifen die Bürger zu den Waffen?</strong> Aus <strong>Hunger</strong>, Wut über die
+    <strong>Ungerechtigkeit</strong> und <strong>Angst</strong>, der König löse die Nationalversammlung
+    mit Soldaten auf.
+  </div>
+  <div class="box box-tip">
+    <strong>Leitspruch:</strong> "Freiheit - Gleichheit - Brüderlichkeit" (liberté, égalité, fraternité).<br>
+    <span class="hinweis">Begriffe zum Abfragen: siehe Karteikarten.</span>
+  </div>
 
-<div class="box box-tip">
-  <strong>Der Leitspruch der Revolution:</strong> "Freiheit - Gleichheit - Brüderlichkeit"
-  (liberté, égalité, fraternité).<br>
-  <span class="hinweis">Die wichtigsten Begriffe zum Abfragen stehen auf den Karteikarten.</span>
 </div>
 
 <div class="fuss">Lernzettel zur App: Absolutismus &amp; Französische Revolution &middot; Klasse 8</div>
